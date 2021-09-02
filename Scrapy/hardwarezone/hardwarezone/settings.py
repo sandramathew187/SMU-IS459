@@ -7,10 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'kiasuparent'
+BOT_NAME = 'hardwarezone'
 
-SPIDER_MODULES = ['kiasuparent.spiders']
-NEWSPIDER_MODULE = 'kiasuparent.spiders'
+SPIDER_MODULES = ['hardwarezone.spiders']
+NEWSPIDER_MODULE = 'hardwarezone.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -63,12 +63,12 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'kiasuparent.pipelines.KiasuparentPipeline': 300,
+    'hardwarezone.pipelines.HardwarezonePipeline': 300,
 }
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
-MONGODB_DB = "kiasuparent"
+MONGODB_DB = "hardwarezone"
 TOPIC_COLLECTION = "topics"
 POST_COLLECTION = "posts"
 

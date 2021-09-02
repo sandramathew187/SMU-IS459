@@ -6,16 +6,18 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from scrapy.exceptions import DropItem
 import pymongo
 
 
-class KiasuparentPipeline:
+
+class HardwarezonePipeline:
     def __init__(self):
         connection = pymongo.MongoClient(
             "localhost",
             27017
         )
-        db = connection["kiasuparent"]
+        db = connection["hardwarezone"]
         self.collection = db["posts"]
 
     def process_item(self, item, spider):
